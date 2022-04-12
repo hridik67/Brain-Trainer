@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="172dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginLeft="119dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="283dp"
+        android:onClick="start"
+        android:text="@string/goo"
+        android:visibility="visible"
+        app:backgroundTint="#31DF38"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gameon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/counttextView"
+            android:layout_width="67dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="33dp"
+            android:background="#EDA49F"
+            android:gravity="center"
+            android:text="@string/_30s"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout1"
+            app:layout_constraintEnd_toStartOf="@+id/sumtextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scoretextView"
+            android:layout_width="67dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginRight="57dp"
+            android:layout_marginBottom="655dp"
+            android:background="#24BACD"
+            android:gravity="center"
+            android:text="@string/_0_0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sumtextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sumtextView"
+            android:layout_width="222dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="495dp"
+            android:background="@color/white"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="@string/_12_13"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/scoretextView"
+            app:layout_constraintStart_toEndOf="@+id/counttextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="194dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="203dp"
+            android:layout_marginLeft="203dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginRight="184dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout1"
+            android:layout_width="315dp"
+            android:layout_height="341dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/counttextView">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="153dp"
+                android:layout_height="167dp"
+                android:onClick="chooseAnswer"
+                android:tag="0"
+                android:text="@string/_3"
+                android:textSize="30sp"
+                app:backgroundTint="#D50D51"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="153dp"
+                android:layout_height="167dp"
+                android:onClick="chooseAnswer"
+                android:tag="1"
+                android:text="@string/_3"
+                android:textSize="30sp"
+                app:backgroundTint="#1783DA"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="153dp"
+                android:layout_height="167dp"
+                android:onClick="chooseAnswer"
+                android:tag="2"
+                android:text="@string/_3"
+                android:textSize="30sp"
+                app:backgroundTint="#E3CE15"
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="153dp"
+                android:layout_height="167dp"
+                android:onClick="chooseAnswer"
+                android:tag="3"
+                android:text="@string/_3"
+                android:textSize="30sp"
+                app:backgroundTint="#CB16EA"
+                app:layout_column="1"
+                app:layout_row="1" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="129dp"
+            android:layout_marginRight="129dp"
+            android:layout_marginBottom="34dp"
+            android:background="#FFFFFF"
+            android:onClick="playAgain"
+            android:text="@string/play_again"
+            android:visibility="invisible"
+            app:backgroundTint="#8E8F7B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
